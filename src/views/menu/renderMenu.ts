@@ -18,7 +18,7 @@ import { pluginConfig } from "@/globals/pluginConfig";
 import { userSettings, saveUserSettings } from "@/globals/userSettings";
 import { changeLanguage } from "@/i18n/changeLanguage";
 import toggleMenu from "./toggleMenu";
-import { $widget } from "../widget/widget";
+import { $widget, updateWidgetStyle } from "../widget/widget";
 
 export default function renderMenu() {
     const $container: HTMLElement = document.createElement("div");
@@ -69,6 +69,50 @@ export default function renderMenu() {
     $lang.value = userSettings.lang;
     $lang.addEventListener("change", (event) => {
         changeLanguage(event.target.value);
+    });
+
+    // *** Widget Settings ***
+    const $widgetPos = $menu.querySelector("#asw-widget-position");
+    const currentPosition = userSettings.position || pluginConfig?.position || "bottom-left";
+    const posOptions = [
+        { code: "bottom-left", label: "Bottom Left" },
+        { code: "bottom-right", label: "Bottom Right" },
+        { code: "top-left", label: "Top Left" },
+        { code: "top-right", label: "Top Right" },
+        { code: "center-left", label: "Center Left" },
+        { code: "center-right", label: "Center Right" },
+        { code: "bottom-center", label: "Bottom Center" },
+        { code: "top-center", label: "Top Center" }
+    ].map(pos => `<option value="${pos.code}">${pos.label}</option>`).join('');
+    
+    $widgetPos.innerHTML = posOptions;
+    $widgetPos.value = currentPosition;
+    
+    $widgetPos.addEventListener("change", (event: Event) => {
+        const val = (event.target as HTMLSelectElement).value;
+        userSettings.position = val;
+        saveUserSettings();
+        updateWidgetStyle();
+        
+        // Dynamically adjust accessibility menu alignment
+        if (val.includes("right")) {
+            $menu.style.right = '0px';
+            $menu.style.left = 'auto';
+        } else {
+            $menu.style.left = '0px';
+            $menu.style.right = 'auto';
+        }
+    });
+
+    const $widgetMinimize = $menu.querySelector("#asw-widget-minimize");
+    const isMinimized = userSettings?.states?.minimized || false;
+    $widgetMinimize.value = isMinimized.toString();
+    
+    $widgetMinimize.addEventListener("change", (event: Event) => {
+        const val = (event.target as HTMLSelectElement).value === "true";
+        userSettings.states.minimized = val;
+        saveUserSettings();
+        updateWidgetStyle();
     });
 
     // *** Utils ***

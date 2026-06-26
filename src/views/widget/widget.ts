@@ -7,6 +7,7 @@ import translateWidget from "../menu/translateWidget";
 import {
     pluginConfig
 } from "@/globals/pluginConfig";
+import { userSettings } from "@/globals/userSettings";
 
 export let $widget: HTMLElement;
 
@@ -17,6 +18,10 @@ export function renderWidget() {
 
     const $btn: HTMLElement = $widget.querySelector(".asw-menu-btn");
     Object.assign($btn.style, getButtonStyle());
+
+    if (userSettings?.states?.minimized) {
+        $btn.classList.add("asw-minimized");
+    }
     
     $btn?.addEventListener("click", (event) => {
         event.preventDefault();
@@ -33,11 +38,28 @@ export function renderWidget() {
     return $widget;
 }
 
+export function updateWidgetStyle() {
+    const $btn: HTMLElement = $widget.querySelector(".asw-menu-btn");
+    if ($btn) {
+        // Clear previous positioning styles to avoid layout conflicts
+        $btn.style.top = "";
+        $btn.style.bottom = "";
+        $btn.style.left = "";
+        $btn.style.right = "";
+
+        Object.assign($btn.style, getButtonStyle());
+
+        if (userSettings?.states?.minimized) {
+            $btn.classList.add("asw-minimized");
+        } else {
+            $btn.classList.remove("asw-minimized");
+        }
+    }
+}
+
 function getButtonStyle() {
-    const {
-        position = "bottom-left",
-        offset = [20, 20]
-    } = pluginConfig;
+    const position = userSettings?.position || pluginConfig?.position || "bottom-left";
+    const offset = pluginConfig?.offset || [20, 20];
 
     const [offsetX = 20, offsetY = 25] = offset;
 
