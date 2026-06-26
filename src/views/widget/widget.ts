@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-expect-error: import html template as text
 import template from "./widget.html";
 import css from "./widget.css";
 import { openMenu } from "../menu/menu";

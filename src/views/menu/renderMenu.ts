@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-expect-error: import html template as text
 import template from "./menu.html";
 
 import FilterButtons from "./FilterButtons";

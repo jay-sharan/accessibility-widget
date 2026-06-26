@@ -11,7 +11,7 @@ import {
 } from "./globals/pluginConfig";
 import { changeLanguage } from "./i18n/changeLanguage";
 
-export default function sienna({
+export default function ja11y({
     options
 }) {
     const savedSettings = getSavedUserSettings();

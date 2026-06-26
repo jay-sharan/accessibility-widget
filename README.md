@@ -1,17 +1,12 @@
-# 👩‍🦽 Sienna: Accessibility Widget for Websites
+# 👩‍🦽 ja11y: Web for Everyone
 
 ![Banner Image](banner.png)
 
-[![GitHub license](https://img.shields.io/github/license/bennyluk/Sienna-Accessibility-Widget)](https://github.com/bennyluk/Sienna-Accessibility-Widget/blob/master/LICENSE)
-[![GitHub release](https://img.shields.io/github/v/release/bennyluk/Sienna-Accessibility-Widget)](https://github.com/bennyluk/Sienna-Accessibility-Widget/releases)
-[![GitHub issues](https://img.shields.io/github/issues/bennyluk/Sienna-Accessibility-Widget)](https://github.com/bennyluk/Sienna-Accessibility-Widget/issues)
+[![GitHub license](https://img.shields.io/github/license/jay-sharan/accessibility-widget)](https://github.com/jay-sharan/accessibility-widget/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/jay-sharan/accessibility-widget)](https://github.com/jay-sharan/accessibility-widget/releases)
+[![GitHub issues](https://img.shields.io/github/issues/jay-sharan/accessibility-widget)](https://github.com/jay-sharan/accessibility-widget/issues)
 
-Sienna: accessibility widget for websites. easy to install, just copy and paste the plugin. Fast performance with lightweight plugin (~30kb).
-
-## 🎉 Getting Started
-[View Demo](https://accessibility-widget.pages.dev)
-
-[Install the plugin quickly with just a copy and paste](https://accessibility-widget.pages.dev/#setup)
+ja11y: web for everyone. Easy to install, just copy and paste the plugin. Fast performance with lightweight plugin (~30kb).
 
 ## 🚀 Features
 
@@ -25,17 +20,14 @@ Sienna: accessibility widget for websites. easy to install, just copy and paste 
 
 ✅ **Reading Guide, Stop Animations, and Big Cursor**: Helpful tools like a reading guide, the ability to stop animations, and a big cursor to make browsing your website easier for users with visual impairments.
 
-## 📌 TODO
+## Acknowledgement & Motivation
+This project is a friendly fork of the excellent [Sienna Accessibility Widget](https://github.com/bennyluk/Sienna-Accessibility-Widget) by Benny Luk. 
 
-- Accessibility Profiles
-- Screen Reader
-- Voice Navigation
-- Position of Button
-- Inject Icon in code
-- Support More Languages
+My primary motivation for this fork is to experiment with and build new features continuously. I plan to submit pull requests back to the original repository whenever possible. However, to keep momentum going and explore slightly different feature focuses in the future, this repository will serve as an independent branch. 
 
-## 🤝 Contributing
-We welcome contributions from anyone who is interested in improving this. If you would like to contribute, please fork the repository and submit a pull request. ❤️
+Web accessibility is a core value, and my goal is simply to help make the web a more inclusive space for everyone. If you find this fork useful, you are more than welcome to use it, contribute to it, or even fork it yourself.
+
+A huge thank you to the original authors for their hard work and for providing the inspiration to get started! ❤️
 
 ## 🎓 License
-Sienna is released under the MIT License
+ja11y is released under the MIT License

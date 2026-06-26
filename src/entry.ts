@@ -1,4 +1,4 @@
-import sienna from "./sienna";
+import ja11y from "./ja11y";
 import { getDefaultLanguage } from "./i18n/getDefaultLanguage";
 import { getScriptDataAttribute } from "./utils/getScriptDataAttribute";
 import observeHTMLLang from "./utils/observeHTMLLang";
@@ -16,7 +16,7 @@ async function initialize() {
         };
         
         await loadLanguages();
-        window.SiennaPlugin = sienna({
+        window.Ja11yPlugin = ja11y({
             options
         });
 
