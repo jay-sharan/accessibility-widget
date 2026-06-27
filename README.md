@@ -1,6 +1,5 @@
 # 👩‍🦽 ja11y: Web for Everyone
 
-![Banner Image](banner.png)
 
 [![GitHub license](https://img.shields.io/github/license/jay-sharan/accessibility-widget)](https://github.com/jay-sharan/accessibility-widget/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/jay-sharan/accessibility-widget)](https://github.com/jay-sharan/accessibility-widget/releases)
