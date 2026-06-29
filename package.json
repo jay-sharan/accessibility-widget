@@ -1,6 +1,6 @@
 {
   "name": "ja11y",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "ja11y: Accessibility Website Widget",
   "main": "dist/ja11y.cjs.js",
   "module": "dist/ja11y.esm.js",
