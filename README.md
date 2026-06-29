@@ -7,6 +7,8 @@
 
 ja11y: web for everyone. Easy to install, just copy and paste the plugin. Fast performance with lightweight plugin (~30kb).
 
+[Demo](https://jay-sharan.github.io/accessibility-widget/)
+
 ## 🚀 Features
 
 ✅ **Multilingual Support**: Supports multiple languages to ensure a seamless user experience for all users.
